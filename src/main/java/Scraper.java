@@ -30,6 +30,8 @@ public class Scraper {
             this.pageTitle = document.title();
             this.products = new ArrayList<Product>();
             findAllProducts();
+        } catch (IllegalArgumentException e) {
+            System.err.println("Malformed URL! Please check URL is correct.");
         } catch (IOException e) {
             e.printStackTrace();
         }

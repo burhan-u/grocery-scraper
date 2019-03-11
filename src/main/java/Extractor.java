@@ -53,7 +53,12 @@ public class Extractor {
     }
 
     public String getProductDescription() {
-        String description = productInformation.selectFirst("p").text();
+        String description;
+        if (productInformation.selectFirst("p").hasText()) {
+            description = productInformation.selectFirst("p").text();
+        } else {
+            description = productInformation.selectFirst("p").nextElementSibling().text();
+        }
         return description;
     }
 
