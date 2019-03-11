@@ -67,11 +67,11 @@ public class Scraper {
     }
 
     public String getResults() {
-        HashMap total = new HashMap();
+        HashMap<String, BigDecimal> total = new HashMap<String, BigDecimal>();
         total.put("gross", this.getTotal());
         total.put("vat", this.getVAT());
 
-        HashMap results = new HashMap();
+        HashMap<String, Object> results = new HashMap<String, Object>();
         results.put("results", this.products);
         results.put("total", total);
 
