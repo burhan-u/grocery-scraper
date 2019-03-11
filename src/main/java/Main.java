@@ -8,8 +8,9 @@
 
 public class Main {
     public static void main(String[] args) {
-        // create new scraper
-        // get results from scraper
-        // print out results JSON
+        final String URL = "https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk/webapp/wcs/stores/servlet/gb/groceries/berries-cherries-currants6039.html";
+
+        Scraper scraper = new Scraper(URL);
+        System.out.println(scraper.getResults());
     }
 }
