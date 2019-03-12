@@ -68,11 +68,11 @@ public class Scraper {
 
     public String getResults() {
         HashMap<String, BigDecimal> total = new HashMap<String, BigDecimal>();
-        total.put("gross", this.getTotal());
-        total.put("vat", this.getVAT());
+        total.put("gross", getTotal());
+        total.put("vat", getVAT());
 
         HashMap<String, Object> results = new HashMap<String, Object>();
-        results.put("results", this.products);
+        results.put("results", products);
         results.put("total", total);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
